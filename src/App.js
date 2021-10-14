@@ -5,7 +5,8 @@ function App() {
   const name="Ruchika";
   
   return (
-    <h1>How are You ?</h1>
+   <div>
+     <h1>Hey!</h1>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -21,6 +22,7 @@ function App() {
           Learn React
         </a> }
       </header>
+    </div>
     </div>
   );
 }
