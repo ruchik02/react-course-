@@ -1,29 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
-function App() {
-  const name="Ruchika";
+function App(){
   
   return (
-   <div>
-     <h1>Hey!</h1>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World {new Date().toDateString()}
-        </p>
-        { <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> }
-      </header>
-    </div>
-    </div>
+   
+   <React.Fragment>
+      <ul>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+      </ul>
+      <p>Hello Para {new Date().toString()}</p>
+   </React.Fragment>
+     
   );
 }
 
