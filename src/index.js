@@ -4,18 +4,26 @@ import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
+function MyApp(){
+  return (
+    <>
+       <ul>
+         <li>Item-1</li>
+        <li>Item-2</li>
+       <li>Item-3</li>
+       <li>Item-4</li>
+      </ul>
+      <ol>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+      </ol>
+      </>
+  )
 }
 
-const user = {
-  firstName: 'Ruchika',
-  lastName: 'Sharma',
-};
-
-const element = <h1>Hello, {formatName(user)}!</h1>;
-
-ReactDOM.render(element, document.getElementById('root'));
+ReactDOM.render(<MyApp/>, document.getElementById('root'));
 
 // ReactDOM.render(
   // <React.StrictMode>
