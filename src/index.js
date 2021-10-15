@@ -4,9 +4,11 @@ import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-function MyApp(){
+function MyInfo(){
   return (
     <>
+    <h1>My name is Ruchika Sharma</h1>
+    <p>I'm pursuing engineering from chitkara university my hobby is singing , i like reading books .</p>
        <ul>
          <li>Item-1</li>
         <li>Item-2</li>
@@ -23,7 +25,7 @@ function MyApp(){
   )
 }
 
-ReactDOM.render(<MyApp/>, document.getElementById('root'));
+ReactDOM.render(<MyInfo/>, document.getElementById('root'));
 
 // ReactDOM.render(
   // <React.StrictMode>
