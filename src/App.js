@@ -5,28 +5,37 @@ function App(){
     return(
         <div className="contacts">
             <Card 
-            img="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
-            name="hello kitten"
-            phone="hello para"
-            email="hey!"
+            contact={{
+                imgUrl:"https://i.pinimg.com/originals/02/e8/60/02e8601a9c05a8540e7fba11c3d7bf0b.jpg",
+            name:" kitten",
+            phone:"8494489488",
+            email:"hey!"
+            }}
+            
             />
             <Card
-            img="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
-            name="hello kitten"
-            phone="hello para"
-            email="hey!"
+            contact={{
+                imgUrl:"https://i.pinimg.com/originals/02/e8/60/02e8601a9c05a8540e7fba11c3d7bf0b.jpg",
+                name:" kitten",
+                phone:"8494489488",
+                email:"hey!"
+            }}
             />
             <Card
-            img="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
-            name="hello kitten"
-            phone="hello para"
-            email="hey!"
+            contact={{
+                imgUrl:"https://i.pinimg.com/originals/02/e8/60/02e8601a9c05a8540e7fba11c3d7bf0b.jpg",
+            name:" kitten",
+            phone:"8494489488",
+            email:"hey!"
+            }}
             />
             <Card
-            img="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
-            name="hello kitten"
-            phone="hello para"
-            email="hey!"
+            contact={{
+                imgUrl:"https://i.pinimg.com/originals/02/e8/60/02e8601a9c05a8540e7fba11c3d7bf0b.jpg",
+                name:" kitten",
+                phone:"8494489488",
+                email:"hey!"
+            }}
             />
 
          </div>  
