@@ -1,24 +1,10 @@
 import React from "react";
 function Header(){
+
+    const firstName="Ruchika";
+    const lastName="Sharma";
     return(
-    <div>
-        <nav>
-            <ul>
-                <li>
-                   Contact
-                </li>
-                <li>
-                    Home
-                </li>
-                <li>
-                   Review
-                </li>
-                <li>
-                   Gallery
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <h1 className="navbar">Hello { `${firstName} ${lastName} `}</h1>
     );
 }
 export default Header;
