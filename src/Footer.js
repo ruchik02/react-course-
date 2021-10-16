@@ -12,16 +12,20 @@ function Footer(){
     else{
         timeDay="night";
     }
+    const style={
+        color:"red",
+     backgroundColor:"pink",
+     fontSize:'50px'
+    }
     return(
         <>
-        <h1>Good {timeDay}</h1>
-        <h2>Hey,How are You? {date.getHours() % 12 } o'clock!</h2>
-       <ul>
-           <li>Item-1</li>
-           <li>Item-2</li>
-           <li>Item-3</li>
+            <h1 style={style}>Good {timeDay}</h1>
+            <h2>Hey,How are You?{date.getHours() % 12} o'clock!</h2><ul>
+                <li>Item-1</li>
+                <li>Item-2</li>
+                <li>Item-3</li>
 
-       </ul>
+            </ul>
         </>
     );
 }
