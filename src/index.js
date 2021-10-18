@@ -7,7 +7,7 @@ import Product from './Product';
 ReactDOM.render(
     <div>
   <App/>
-  <Product/>
+  {/* <Product/> */}
     </div>
 ,document.getElementById('root'));
 

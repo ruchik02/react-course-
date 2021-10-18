@@ -9,64 +9,69 @@ class Product extends React.Component{
             img:'',
         }
         // this.increaseQuantity=this.increaseQuantity.bind(this);
-        this.testing();
+        // this.testing();
+        // this.handleClick();
     }
-    testing(){
-        const promise=new Promise((resolve,reject)=>{
-            setTimeout(()=>{
-                resolve('done')
-            },5000)
-        });
-        promise.then(()=>{
-            //setState acts like a synchronous call
-            this.setState({qty:this.state.qty+10});
-            this.setState({qty:this.state.qty+10});
-            this.setState({qty:this.state.qty+10});
-            console.log('state',this.state);
-        });
-    }
-    increaseQuantity= ()=>{
-       
-         //form 2 setState if prev state required use this form 
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty + 1
-            }
-        },()=>{
-            console.log('this',this.state);
-        });
-        // this.setState((prevState)=>{
-        //     return{
-        //         qty: prevState.qty + 1
-        //     }
-        // });
-        // this.setState((prevState)=>{
-        //     return{
-        //         qty: prevState.qty + 1
-        //     }
-        // });
-        // this.setState((prevState)=>{
-        //     return{
-        //         qty: prevState.qty + 1
-        //     }
-        // });
-        
-    }
-
-    decreaseQuantity= ()=>{
-        const {qty} =this.state;
-        if(qty===0){
-            return;
-        }
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty - 1
-            }
-           
-        });
-        console.log('this',this.state);
-    }
+    // testing(){
+    //     const promise=new Promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             resolve('done')
+    //         },5000)
+    //     });
+    //     promise.then(()=>{
+    //         //setState acts like a synchronous call
+    //         this.setState({qty:this.state.qty+10});
+    //         this.setState({qty:this.state.qty+10});
+    //         this.setState({qty:this.state.qty+10});
+    //         console.log('state',this.state);
+    //     });
+    // }
     
+    // increaseQuantity= ()=>{
+       
+    //      //form 2 setState if prev state required use this form 
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty + 1
+    //         }
+    //     },()=>{
+    //         console.log('this',this.state);
+    //     });
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty + 1
+    //         }
+    //     });
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty + 1
+    //         }
+    //     });
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty + 1
+    //         }
+    //     });
+        
+    // }
+
+    // decreaseQuantity= ()=>{
+    //     const {qty} =this.state;
+    //     if(qty===0){
+    //         return;
+    //     }
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty - 1
+    //         }
+           
+    //     });
+    //     console.log('this',this.state);
+    // }
+    handleClick = () => {
+        this.setState({ qty: 2 }, () => console.log(this.state.qty));
+        this.setState({ qty: 5 }, () => console.log(this.state.qty));
+    }
     render(){
         console.log('render');
         const{price,title,qty}=this.state;
@@ -84,7 +89,7 @@ class Product extends React.Component{
                       alt="increase"
                       className="actions-icons"
                       src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png"
-                      onClick={this.increaseQuantity}
+                      onClick={this.handleClick}
                        />
                         <img
                       alt="decrease"
