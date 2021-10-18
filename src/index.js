@@ -2,14 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import Header from './Header';
-// import LikeButton from './LikeButton';
-// import MyInfo from './MyInfo';
+
+ReactDOM.render(<App/>,document.getElementById('root'));
 
 
-ReactDOM.render(
-    <div>
-     <App/>
-     {/* <Header/> */}
-    </div>
-    ,document.getElementById('root'));
