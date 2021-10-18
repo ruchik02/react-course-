@@ -1,17 +1,50 @@
 import React from "react";
 class Product extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            price:999,
+            title:'mobile phone',
+            qty:1,
+            img:''
+        }
+        // this.increaseQuantity=this.increaseQuantity.bind(this);
+    }
+    increaseQuantity= ()=>{
+        console.log('this',this.state);
+    }
+
     
     render(){
+        const{price,title,qty}=this.state;
         return (
           <div className="product">
               <div className="left">
                  <img style={styles.image} />
               </div>
               <div className="right">
-                  <div style={{color:'red',fontSize:'30px'}}>Phone</div>
-                  <div style={{color:'#777'}}>Rs 999</div>
-                  <div style={{color: '#777'}}>Qty:1</div>
+                  <div style={{color:'red',fontSize:'30px'}}>{title}</div>
+                  <div style={{color:'#777'}}>Rs:{price}</div>
+                  <div style={{color: '#777'}}>Qty{qty}</div>
                   <div className="cart-item-actions">
+                      <img
+                      alt="increase"
+                      className="actions-icons"
+                      src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png"
+                      onClick={this.increaseQuantity}
+                       />
+                        <img
+                      alt="decrease"
+                      className="actions-icons"
+                      src="https://cdn-icons-png.flaticon.com/512/66/66889.png"
+                       />
+                        <img
+                      alt="delete"
+                      className="actions-icons"
+                      src="https://cdn-icons.flaticon.com/png/512/484/premium/484611.png?token=exp=1634539846~hmac=6378d8d64a61cccc0fe0f8bde8e30058"
+                       />
+
+
 
                   </div>
               </div>
