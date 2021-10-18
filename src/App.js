@@ -1,14 +1,12 @@
 import React from 'react';
+import Product from './Product';
 function App(){
-    const name='Ruchika';
-    const loading=false;
-    if(loading){
-        return <h1>Loading!</h1>
-    }
+    
     return(
-        <div>
-            <p>Hello {name}</p>
-        </div>
+     <div className='app'>
+         <h1>Cart</h1>
+         <Product/>
+     </div>
     )
 }
 export default App;
