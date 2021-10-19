@@ -1,5 +1,5 @@
 import React from "react";
-class Product extends React.Component{
+const Product=(props)=>{
     // constructor(){
     //     this.state={
     //         price:999,
@@ -68,15 +68,15 @@ class Product extends React.Component{
     //     this.setState({ qty: 2 }, () => console.log(this.state.qty));
     //     this.setState({ qty: 5 }, () => console.log(this.state.qty));
     // }
-    render(){
-        console.log('this.props',this.props);
-        const{price,title,qty}=this.props.product;
-        const {product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct}=this.props;
+    
+       // console.log('this.props',this.props);
+        const{price,title,qty}=props.product;
+        const {product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct}=props;
         return (
           <div className="product">
-              {this.props.jsx}
+              {/* {this.props.jsx} */}
               <div className="left">
-                 <img style={styles.image} />
+                 <img style={styles.image} src={product.img} />
               </div>
               <div className="right">
                   <div style={{color:'red',fontSize:'30px'}}>{title}</div>
@@ -102,9 +102,6 @@ class Product extends React.Component{
                       src="https://cdn-icons.flaticon.com/png/512/484/premium/484611.png?token=exp=1634539846~hmac=6378d8d64a61cccc0fe0f8bde8e30058"
                       onClick={()=> onDeleteProduct(product.id)}
                        />
-
-
-
                   </div>
               </div>
 
@@ -112,7 +109,7 @@ class Product extends React.Component{
         );
 
     }
-}
+
 const styles={
         image:{
             height:110,
