@@ -23,47 +23,47 @@ class Product extends React.Component{
     //     });
     // }
     
-    increaseQuantity= ()=>{
+    // increaseQuantity= ()=>{
        
-         //form 2 setState if prev state required use this form 
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty + 1
-            }
-        },()=>{
-            console.log('this',this.state);
-        });
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty + 1
-            }
-        });
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty + 1
-            }
-        });
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty + 1
-            }
-        });
+    //      //form 2 setState if prev state required use this form 
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty + 1
+    //         }
+    //     },()=>{
+    //         console.log('this',this.state);
+    //     });
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty + 1
+    //         }
+    //     });
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty + 1
+    //         }
+    //     });
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty + 1
+    //         }
+    //     });
         
-    }
+    // }
 
-    decreaseQuantity= ()=>{
-        const {qty} =this.state;
-        if(qty===0){
-            return;
-        }
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty - 1
-            }
+    // decreaseQuantity= ()=>{
+    //     const {qty} =this.state;
+    //     if(qty===0){
+    //         return;
+    //     }
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty: prevState.qty - 1
+    //         }
            
-        });
-        console.log('this',this.state);
-    }
+    //     });
+    //     console.log('this',this.state);
+    // }
     // handleClick = () => {
     //     this.setState({ qty: 2 }, () => console.log(this.state.qty));
     //     this.setState({ qty: 5 }, () => console.log(this.state.qty));
@@ -71,6 +71,7 @@ class Product extends React.Component{
     render(){
         console.log('this.props',this.props);
         const{price,title,qty}=this.props.product;
+        const {product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct}=this.props;
         return (
           <div className="product">
               {this.props.jsx}
@@ -86,18 +87,20 @@ class Product extends React.Component{
                       alt="increase"
                       className="actions-icons"
                       src="https://cdn-icons-png.flaticon.com/512/1828/1828926.png"
-                      onClick={this.increaseQuantity}
+                    //   onClick={this.increaseQuantity}
+                    onClick={()=>onIncreaseQuantity(product)}
                        />
                         <img
                       alt="decrease"
                       className="actions-icons"
                       src="https://cdn-icons-png.flaticon.com/512/66/66889.png"
-                      onClick={this.decreaseQuantity}
+                      onClick={()=>onDecreaseQuantity(product)}
                        />
                         <img
                       alt="delete"
                       className="actions-icons"
                       src="https://cdn-icons.flaticon.com/png/512/484/premium/484611.png?token=exp=1634539846~hmac=6378d8d64a61cccc0fe0f8bde8e30058"
+                      onClick={()=> onDeleteProduct(product.id)}
                        />
 
 
